@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import {Switch, Route} from 'react-router-dom'
-import Welcome from './Welcome'
+import KegList from './KegList'
 
 function App() {
   return (
@@ -9,8 +9,8 @@ function App() {
       <Header />
       
       <Switch>
-        {/* <Route exact path='/' component={TicketList} />
-        <Route exact path='/newticket' component={NewTicketForm} /> */}
+        <Route exact path='/' component={KegList} />
+        {/* <Route exact path='/newticket' component={NewTicketForm} /> */}
       </Switch>
     </div>
   )

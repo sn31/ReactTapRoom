@@ -1,10 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logoSmall from '../assets/images/logoS.png'
-import Authentication from './Authentication'
-import Language from './Language'
-import Download from './Download'
-
+import logo from '../assets/images/beer-bottle-cap.png'
 function NavBar() {
   return (
     <div style={{marginLeft:'12em', marginRight:'auto'}}>
@@ -26,7 +22,7 @@ function NavBar() {
       <ul>
         <li>
           <Link to="/">
-            <img src={logoSmall} />
+            <img src={logo} />
           </Link>
         </li>
         <li>

@@ -6,7 +6,7 @@ function Header() {
     <div>
       <style jsx>{`
         div {
-          background-color: #2a2a2b;
+          background-color: #d888a3;
           height: 5em;
         }
         `}</style>
