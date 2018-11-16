@@ -10,15 +10,17 @@ function Action(props) {
         a {
             display: inline-block;
             float: left;
-            border: 1px solid pink;
-            padding: 0.5em;
+            border: 1px solid white;
+            padding: 0.6em;
             margin-left: 0.1em;
             margin-right: 0.1em;
             background-color: black;
+            border-radius: 5px;
         }
         div {
             text-align: center;
-            padding-left: 40%;
+            margin-left: 38%;
+            margin-right: 38%; 
         }
       `}</style>
     </div>

@@ -5,7 +5,7 @@ import KegList from "./KegList";
 import Employee from "./Employee";
 import KegForm from "./KegForm";
 import DeleteKeg from "./DeleteKeg";
-import background from "../assets/images/bg.jpg";
+import background from "../assets/images/bg2.jpg";
 import About from "./About";
 function App() {
   return (
