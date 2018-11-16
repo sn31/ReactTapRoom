@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../assets/images/beer-bottle-cap.png'
 function NavBar() {
   return (
-    <div style={{marginLeft:'12em', marginRight:'auto'}}>
+    <div >
       <style jsx>{`
         ul {
           list-style-type: none;
@@ -13,22 +13,22 @@ function NavBar() {
         ,
         li {
           display: inline-block;
-          float: left;
-          margin-right: 1em;
+          float: right;
+          margin-right: 0.5em;
           color: white;
         }
       `}</style>
       <ul>
         <li>
           <Link to="/">
-            <img src={logo} style={{marginTop: '-20px', width:'70%'}}/>
+            <img src={logo} style={{marginTop: '-15px', width:'70%'}}/>
           </Link>
         </li>
         <li>
-          <Link to="/" style={{color:'white', textDecoration:'none'}}>Home</Link>
+          <Link to="/about" style={{color:'white', textDecoration:'none'}}>About</Link>
         </li>
         <li>
-          <Link to="/events" style={{color:'white', textDecoration:'none'}}>Events</Link>
+          <Link to="/" style={{color:'white', textDecoration:'none'}}>Menu</Link>
         </li>
         <li>
           <Link to="/employee" style={{color:'white', textDecoration:'none'}}>Employee</Link>

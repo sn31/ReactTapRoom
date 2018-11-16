@@ -24,7 +24,7 @@ function ActionList() {
       <style jsx>{`
         div {
             text-align: center;
-            margin-top: 3em;
+            margin-top: 1.5em;
         }
       
       `}</style>

@@ -34,8 +34,8 @@ Differences in development process in Angular and React:
 
 ## Development Notes & Issues
 
-* Had issue with routing the keg new/edit form.
-* Having issue with overall page styling (body margin specifically).
+* Had issue with routing the keg new/edit form (Solved).
+* Had issue with overall page styling (body margin specifically) (Solved).
 
 ## Known bugs
 

@@ -4,6 +4,7 @@ function About() {
   return (
     <div>
       <h1>About</h1><hr/>
+
       <style jsx>{`
         div {
           text-align: center;
