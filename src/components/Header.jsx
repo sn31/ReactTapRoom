@@ -9,8 +9,9 @@ function Header() {
     <NavBar/><br/>
       <style jsx>{`
         div {
-          background-color: #d888a3;
+          background-image: linear-gradient(90deg,white, #d888a3);
           height: 5em;
+          box-shadow: 5px 5px 8px black;
         }
         
         `}</style>

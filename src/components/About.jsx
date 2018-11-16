@@ -10,7 +10,9 @@ function About() {
           text-align: center;
           width: 500px;
           background-color: rgba(144, 148, 155, 0.8);
-          padding: 1em;
+          padding: 0.8em;
+          margin: 0.5em;
+          box-shadow: 5px 10px 8px black;
         }
       `}</style>
       <p>

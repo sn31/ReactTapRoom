@@ -19,6 +19,8 @@ function App() {
           background-repeat: no-repeat;
           background-size: cover;
           color: white;
+          font-family: 'Poppins', sans-serif;
+          font-size: 0.9em;
         }
       `}</style>
       <Header />
