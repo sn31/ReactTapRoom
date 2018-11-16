@@ -7,6 +7,8 @@ import KegForm from "./KegForm";
 import DeleteKeg from "./DeleteKeg";
 import background from "../assets/images/bg2.jpg";
 import About from "./About";
+import Error404 from './Error404';
+
 function App() {
   return (
     <div>
@@ -31,6 +33,7 @@ function App() {
         <Route path="/editkeg" component={KegForm} />
         <Route path="/deletekeg" component={DeleteKeg} />
         <Route path="/about" component={About} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
