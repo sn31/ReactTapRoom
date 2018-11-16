@@ -4,17 +4,20 @@ import {Link} from 'react-router-dom'
 function Action(props) {
   return(
     <div>
-      <a><Link to={'/employee/' +props.route}>{props.action}</Link></a>
+      <a><Link style={{textDecoration:'none'}} to={'/employee/' +props.route}>{props.action}</Link></a>
       <style jsx>{`
         a {
-            display: block;
+            display: inline-block;
+            float: left;
             border: 1px solid pink;
-            width: 6em;
-            margin-left: auto;
-            margin-right: auto;
+            padding: 0.5em;
+            margin-left: 0.1em;
+            margin-right: 0.1em;
         }
         div {
             text-align: center;
+            padding-left: 40%;
+           
         }
       `}</style>
     </div>

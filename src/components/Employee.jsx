@@ -5,8 +5,7 @@ import KegList from './KegList'
 function Employee() {
   return(
     <div>
-      <ActionList/><hr/>
-      
+      <ActionList/><br/>
       <KegList/>
     </div>
   )
