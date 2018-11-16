@@ -13,8 +13,7 @@ Recreating an application for employees at a local Tap Room to manage the invent
 Differences in development process in Angular and React:
 
 * React components are based on the UI of the application while those in Angular are based on functionality.
-*
-*
+* Developing in Angular seems to take more time due to the amount of syntax required for a simple task.
 
 ## Specifications
 
@@ -34,6 +33,7 @@ Differences in development process in Angular and React:
 * As an employee, I might want to trigger the "happy hour" option automatically at a certain time of the day or week.
 
 ## Development Notes & Issues
+
 * Had issue with routing the keg new/edit form.
 
 ## Known bugs
