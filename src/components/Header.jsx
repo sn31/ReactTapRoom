@@ -3,7 +3,7 @@ import NavBar from './NavBar'
 
 function Header() {
   return (
-    <div>
+    <div style={{ marginBottom: '0'}}>
       <style jsx>{`
         div {
           background-color: #d888a3;
@@ -12,7 +12,6 @@ function Header() {
         }
         `}</style>
       <NavBar/><br/>
-      <h1 style={{marginTop: '2em'}}>Welcome to Skye's Taproom</h1>
     </div>
   )
 }
