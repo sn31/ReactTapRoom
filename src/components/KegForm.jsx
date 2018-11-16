@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function KegForm() {
   return (
@@ -68,7 +68,7 @@ function KegForm() {
         }
       `}</style>
     </div>
-  );
+  )
 }
 
-export default KegForm;
+export default KegForm
