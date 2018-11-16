@@ -22,11 +22,11 @@ function NavBar() {
       <ul>
         <li>
           <Link to="/">
-            <img src={logo} />
+            <img src={logo} style={{marginTop: '-20px', width:'70%'}}/>
           </Link>
         </li>
         <li>
-          <Link to="/menu" style={{color:'white', textDecoration:'none'}}>Menu</Link>
+          <Link to="/employee" style={{color:'white', textDecoration:'none'}}>Employee</Link>
         </li>
       </ul>
     </div>

@@ -8,9 +8,11 @@ function Header() {
         div {
           background-color: #d888a3;
           height: 5em;
+          margin-bottom: 1em;
         }
         `}</style>
-      <NavBar/>
+      <NavBar/><br/>
+      <h1 style={{marginTop: '2em'}}>Welcome to Skye's Taproom</h1>
     </div>
   )
 }

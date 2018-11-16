@@ -73,6 +73,13 @@ function KegList() {
   return(
     <div>
       {kegs}
+      <style jsx>{`
+        div {
+            text-align: center;
+            margin-top: 3em;
+        }
+      
+      `}</style>
     </div>
   )
 }
