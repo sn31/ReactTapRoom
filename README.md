@@ -12,7 +12,7 @@ Recreating an application for employees at a local Tap Room to manage the invent
 
 Differences in development process in Angular and React:
 
-*
+* React components are based on the UI of the application while those in Angular are based on functionality.
 *
 *
 
