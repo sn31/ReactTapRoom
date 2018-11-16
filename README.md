@@ -35,6 +35,7 @@ Differences in development process in Angular and React:
 ## Development Notes & Issues
 
 * Had issue with routing the keg new/edit form.
+* Having issue with overall page styling (body margin specifically).
 
 ## Known bugs
 
@@ -42,7 +43,7 @@ None
 
 ## Contact & Support
 
-* Skye Nguyen - @sn31 - skye@dames.es
+Skye Nguyen - @sn31 - skye@dames.es
 
 ## Technologies used
 

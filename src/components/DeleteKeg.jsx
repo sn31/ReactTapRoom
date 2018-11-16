@@ -61,7 +61,7 @@ function DeleteKeg() {
     <div>
       <h1>Choose a keg to delete</h1>
       <select>
-          <option>Name</option>
+        <option>Name</option>
         {options}
       </select><br/>
       <button>Submit</button>

@@ -4,9 +4,10 @@ import App from './components/App'
 import { AppContainer } from 'react-hot-loader'
 import {HashRouter} from 'react-router-dom'
 
+
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer style={{height: '100vh'}}>
+    <AppContainer>
       <HashRouter>
         <Component/>
       </HashRouter>

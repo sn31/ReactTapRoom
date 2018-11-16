@@ -72,8 +72,8 @@ function KegList() {
   )
   return(
     <div>
-        <h1 style={{ marginTop: '0.0em', paddingTop: '1em'}}>Menu</h1>
-        <p>Brewer&nbsp;&nbsp;|&nbsp;&nbsp;Description&nbsp;&nbsp;|&nbsp;&nbsp;ABV&nbsp;&nbsp;|&nbsp;&nbsp;$Price&nbsp;&nbsp;|&nbsp;&nbsp;Inventory</p><hr/>
+      <h1 style={{ marginTop: '0.0em', paddingTop: '1em'}}>Menu</h1>
+      <p>Brewer&nbsp;&nbsp;|&nbsp;&nbsp;Description&nbsp;&nbsp;|&nbsp;&nbsp;ABV&nbsp;&nbsp;|&nbsp;&nbsp;$Price&nbsp;&nbsp;|&nbsp;&nbsp;Inventory</p><hr/>
       {kegs}
       <style jsx>{`
         div {

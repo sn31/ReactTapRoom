@@ -1,11 +1,11 @@
-import React from "react";
-import Header from "./Header";
-import { Switch, Route } from "react-router-dom";
-import KegList from "./KegList";
-import Employee from "./Employee";
-import KegForm from "./KegForm";
-import DeleteKeg from "./DeleteKeg";
-import background from "../assets/images/bg.jpg";
+import React from 'react'
+import Header from './Header'
+import { Switch, Route } from 'react-router-dom'
+import KegList from './KegList'
+import Employee from './Employee'
+import KegForm from './KegForm'
+import DeleteKeg from './DeleteKeg'
+import background from '../assets/images/bg.jpg'
 
 function App() {
   return (
@@ -19,7 +19,6 @@ function App() {
           background-repeat: no-repeat;
           background-size: cover;
           color: white;
-          
         }
       `}</style>
       <Header />
@@ -31,7 +30,7 @@ function App() {
         <Route path="/deletekeg" component={DeleteKeg} />
       </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
