@@ -34,7 +34,7 @@ Differences in development process in Angular and React:
 * As an employee, I might want to trigger the "happy hour" option automatically at a certain time of the day or week.
 
 ## Development Notes & Issues
-
+* Had issue with routing the keg new/edit form.
 
 ## Known bugs
 

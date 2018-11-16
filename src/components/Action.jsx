@@ -1,10 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
+import {KegForm} from './KegForm'
 function Action(props) {
   return(
     <div>
-      <a><Link style={{textDecoration:'none'}} to={'/employee/' +props.route}>{props.action}</Link></a>
+      <a><Link style={{textDecoration:'none'}} to={'/' + props.route}>{props.action}</Link></a>
       <style jsx>{`
         a {
             display: inline-block;
