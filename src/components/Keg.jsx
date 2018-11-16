@@ -14,7 +14,7 @@ function Keg(props) {
   )
 }
 
-Keg.PropTypes = {
+Keg.propTypes = {
   name: PropTypes.string,
   brewer: PropTypes.string,
   description: PropTypes.string,

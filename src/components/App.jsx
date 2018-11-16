@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import {Switch, Route} from 'react-router-dom'
 import KegList from './KegList'
+import Employee from './Employee'
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       
       <Switch>
         <Route exact path='/' component={KegList} />
-        {/* <Route exact path='/newticket' component={NewTicketForm} /> */}
+        <Route exact path='/employee' component={Employee} />
       </Switch>
     </div>
   )
