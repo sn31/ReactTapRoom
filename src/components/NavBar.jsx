@@ -9,7 +9,6 @@ function NavBar() {
           list-style-type: none;
           padding-left: 0;
           font-size: 1.5em;
-          color: #1e704b;
         }
         ,
         li {
