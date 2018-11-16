@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import {Link} from 'react-router-dom'
 function Action(props) {
   return(
     <div>
-      <a>{props.action}</a><br/>
+      <a><Link to={'/employee/' +props.route}>{props.action}</Link></a>
       <style jsx>{`
         a {
             display: block;
@@ -22,7 +22,9 @@ function Action(props) {
 }
 
 Action.propTypes = {
-  action: PropTypes.string
+  action: PropTypes.string,
+  route: PropTypes.string
+
 }
 
 export default Action

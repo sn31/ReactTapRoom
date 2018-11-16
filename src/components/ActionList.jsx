@@ -3,14 +3,18 @@ import Action from './Action'
 
 
 function ActionList() {
-  const actionList= ['Add New Keg', 'Edit Keg', 'Delete Keg']
-      
+  const actionList= [
+    {action:'Add New Keg',route:'addnewkeg'},
+    {action:'Edit Keg',route:'editkeg'},
+    {action:'Delete Keg',route:'deletekeg'}
+  ] 
   let actions=[]
 
   actionList.map((action,index)=>
     actions.push(
       <Action
-        action = {action}
+        action = {action.action}
+        route ={action.route}
         key = {index}/>
     )
   )
