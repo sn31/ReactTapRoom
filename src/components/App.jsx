@@ -19,6 +19,7 @@ function App() {
           background-repeat: no-repeat;
           background-size: cover;
           color: white;
+          
         }
       `}</style>
       <Header />

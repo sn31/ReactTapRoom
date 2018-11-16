@@ -6,7 +6,7 @@ import {HashRouter} from 'react-router-dom'
 
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
+    <AppContainer style={{height: '100vh'}}>
       <HashRouter>
         <Component/>
       </HashRouter>

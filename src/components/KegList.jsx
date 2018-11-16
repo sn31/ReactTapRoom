@@ -72,14 +72,16 @@ function KegList() {
   )
   return(
     <div>
-        <h1 style={{ marginTop: '0.0em', paddingTop: '1em'}}>Welcome to Skye's Taproom</h1>
+        <h1 style={{ marginTop: '0.0em', paddingTop: '1em'}}>Menu</h1>
+        <p>Brewer&nbsp;&nbsp;|&nbsp;&nbsp;Description&nbsp;&nbsp;|&nbsp;&nbsp;ABV&nbsp;&nbsp;|&nbsp;&nbsp;$Price&nbsp;&nbsp;|&nbsp;&nbsp;Inventory</p><hr/>
       {kegs}
       <style jsx>{`
         div {
             text-align: center;
-            margin-top: 3em;
-            background-color: rgba(167, 174, 186,0.5);
-            margin-top: 0;
+            background-color: rgba(144, 148, 155,0.8);
+            width: 500px;
+            margin: 0.5em auto 0 auto;
+            height: 90vh;
         }
       
       `}</style>

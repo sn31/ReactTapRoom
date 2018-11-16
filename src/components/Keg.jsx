@@ -5,11 +5,12 @@ function Keg(props) {
   return(
     <div>
       <h4>{props.name}</h4>
-      <p>{props.brewer}</p>
-      <p>{props.description}</p>
-      <p>{props.abv}</p>
-      <p>{props.price}</p>
-      <p>{props.remaining}</p>
+      <p>{props.brewer}&nbsp;&nbsp;|&nbsp;&nbsp;{props.description}&nbsp;&nbsp;|&nbsp;&nbsp;{props.abv}&nbsp;&nbsp;|&nbsp;&nbsp;${props.price}&nbsp;&nbsp;|&nbsp;&nbsp;{props.remaining} pints</p>
+      <style jsx>{`
+        p {
+            margin-bottom: 0;
+        }
+      `}</style>
     </div>
   )
 }
