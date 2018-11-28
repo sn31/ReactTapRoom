@@ -13,9 +13,6 @@ function Keg(props) {
         <li>{props.remaining} pint</li>
       </ul><br/>
       <style jsx>{`
-        p {
-          margin-bottom: 0;
-        }
         ul {
           list-style-type: none;
         }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/beer-bottle-cap.png'
+import logo from '../assets/images/logo.png'
 function NavBar() {
   const LinkStyle = {
     color: 'white',

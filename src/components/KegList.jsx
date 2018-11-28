@@ -73,9 +73,13 @@ function KegList() {
   return (
     <div>
       <h1 style={{ marginTop: '0.0em', paddingTop: '1em' }}>Menu</h1>
-      <p>
-        Brewer&nbsp;&nbsp;|&nbsp;&nbsp;Description&nbsp;&nbsp;|&nbsp;&nbsp;ABV&nbsp;&nbsp;|&nbsp;&nbsp;$Price&nbsp;&nbsp;|&nbsp;&nbsp;Inventory
-      </p>
+      <ul>
+        <li>Brew</li>
+        <li>Description</li>
+        <li>ABV</li>
+        <li>Price</li>
+        <li>Inventory</li>
+      </ul>
       <hr />
       {kegs}
       <style jsx>{`
@@ -86,8 +90,15 @@ function KegList() {
           margin: 0.5em auto 0.5em auto;
           height: 95vh;
           border: 1px solid;
-          padding: 10px;
+          padding: 5px;
           box-shadow: 5px 10px 8px black;
+        }
+        ul {
+          list-style-type: none;
+        }
+        li {
+          display: inline-block;
+          margin-right: 1em;
         }
       `}</style>
     </div>
