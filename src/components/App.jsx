@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "./Header";
-import { Switch, Route } from "react-router-dom";
-import KegList from "./KegList";
-import Employee from "./Employee";
-import KegForm from "./KegForm";
-import DeleteKeg from "./DeleteKeg";
-import background from "../assets/images/bg2.jpg";
-import About from "./About";
-import Error404 from './Error404';
+import React from 'react'
+import Header from './Header'
+import { Switch, Route } from 'react-router-dom'
+import KegList from './KegList'
+import Employee from './Employee'
+import KegForm from './KegForm'
+import DeleteKeg from './DeleteKeg'
+import background from '../assets/images/bg2.jpg'
+import About from './About'
+import Error404 from './Error404'
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
         <Route component={Error404} />
       </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

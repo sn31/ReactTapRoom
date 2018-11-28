@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function About() {
   return (
@@ -57,7 +57,7 @@ function About() {
         facilisis.
       </p>
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

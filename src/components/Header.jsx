@@ -6,7 +6,7 @@ function Header() {
     <div style={{ marginBottom: '0'}}>
 
 
-    <NavBar/><br/>
+      <NavBar/><br/>
       <style jsx>{`
         div {
           background-color: black;
