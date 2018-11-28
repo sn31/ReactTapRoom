@@ -1,18 +1,31 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
 function Keg(props) {
-  return(
+  return (
     <div>
       <h4>{props.name}</h4>
-      <p>{props.brewer}&nbsp;&nbsp;|&nbsp;&nbsp;{props.description}&nbsp;&nbsp;|&nbsp;&nbsp;{props.abv}&nbsp;&nbsp;|&nbsp;&nbsp;${props.price}&nbsp;&nbsp;|&nbsp;&nbsp;{props.remaining} pints</p>
+      <ul>
+        <li>{props.brewer}</li>
+        <li>{props.description}</li>
+        <li> {props.abv}</li>
+        <li>{props.price}</li>
+        <li>{props.remaining} pint</li>
+      </ul><br/>
       <style jsx>{`
         p {
-            margin-bottom: 0;
+          margin-bottom: 0;
+        }
+        ul {
+          list-style-type: none;
+        }
+        li {
+          display: inline-block;
+          margin-right: 1em;
         }
       `}</style>
     </div>
-  )
+  );
 }
 
 Keg.propTypes = {
@@ -21,7 +34,7 @@ Keg.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string,
-  remaining: PropTypes.string,
-}
+  remaining: PropTypes.string
+};
 
-export default Keg
+export default Keg;

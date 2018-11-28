@@ -2,6 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/images/beer-bottle-cap.png'
 function NavBar() {
+  const LinkStyle = {
+    color: 'white',
+    textDecoration: 'none'
+  }
   return (
     <div >
       <style jsx>{`
@@ -9,6 +13,7 @@ function NavBar() {
           list-style-type: none;
           padding-left: 0;
           font-size: 1.5em;
+          margin-top: 0.8em;
         }
         ,
         li {
@@ -16,22 +21,25 @@ function NavBar() {
           float: right;
           margin-right: 0.5em;
           color: white;
+        },
+        div {
+          height: 5em;
         }
       `}</style>
       <ul>
         <li>
           <Link to="/">
-            <img src={logo} style={{marginTop: '-15px', width:'70%'}}/>
+            <img src={logo} style={{marginTop: '-15px', height:'50%'}}/>
           </Link>
         </li>
         <li>
-          <Link to="/about" style={{color:'white', textDecoration:'none'}}>About</Link>
+          <Link to="/about" style={LinkStyle}>About</Link>
         </li>
         <li>
-          <Link to="/" style={{color:'white', textDecoration:'none'}}>Menu</Link>
+          <Link to="/" style={LinkStyle}>Menu</Link>
         </li>
         <li>
-          <Link to="/employee" style={{color:'white', textDecoration:'none'}}>Employee</Link>
+            <Link to="/employee" style={LinkStyle}>Employee</Link>
         </li>
       </ul>
     </div>

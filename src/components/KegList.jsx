@@ -82,9 +82,9 @@ function KegList() {
         div {
           text-align: center;
           background-color: rgba(144, 148, 155, 0.8);
-          width: 500px;
+          width: 50%;
           margin: 0.5em auto 0.5em auto;
-          height: 90vh;
+          height: 95vh;
           border: 1px solid;
           padding: 10px;
           box-shadow: 5px 10px 8px black;
