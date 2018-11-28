@@ -1,5 +1,5 @@
 {
-  "name": "react-help-queue",
+  "name": "react-tap-room",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -18,7 +18,9 @@
     "react-responsive-carousel": "^3.1.43",
     "react-router-dom": "^4.0.0",
     "start": "^5.1.0",
-    "styled-jsx": "^3.1.1"
+    "styled-jsx": "^3.1.1",
+    "uuid": "^3.2.1",
+    "react-bootstrap": "^0.32.4"
   },
   "devDependencies": {
     "babel-core": "^6.24.1",
