@@ -1,74 +1,153 @@
-import React from 'react'
+import React from "react";
+import {
+  Form,
+  FormGroup,
+  Col,
+  ControlLabel,
+  FormControl
+} from "react-bootstrap";
+
 
 function KegForm() {
+  let _name= null;
+  let _brewer= null;
+  let _description = null;
+  let _abv= null;
+  let _remaining= null;
+  let _price= null;
   return (
     <div>
-      <form>
-        <label>Name</label>
-        <input type="text" />
-        <label>Brewer</label>
-        <input type="text" />
-        <label>Description</label>
-        <input type="text" />
-        <label>Abv</label>
-        <input type="text" />
-        <label>Price</label>
-        <input type="text" />
-        <label>Remaining</label>
-        <input type="text" />
-      </form>
-      <button>Submit</button>
+      <Form >
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            Name
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="input"
+              type="text"
+              id="name"
+              placeholder="Name"
+              inputRef={input => {
+                _name = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            Brewer
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="input"
+              type="text"
+              id="brewer"
+              placeholder="Brewer"
+              inputRef={input => {
+                _brewer = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            Description
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="textarea"
+              type="text"
+              id="description"
+              placeholder="Description"
+              inputRef={input => {
+                _description = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            ABV
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="input"
+              type="number"
+              id="abv"
+              placeholder="ABV"
+              inputRef={input => {
+                _abv = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            Remaining
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="input"
+              type="number"
+              id="remaining"
+              placeholder="Remaining"
+              inputRef={input => {
+                _remaining = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Col componentClass={ControlLabel}>
+            Price
+          </Col>
+          <Col>
+            <FormControl
+              componentClass="input"
+              type="number"
+              id="price"
+              placeholder="Price"
+              inputRef={input => {
+                _price = input;
+              }}
+            />
+          </Col>
+        </FormGroup>
+        <button className="btn">Submit</button>
+      </Form>
+
       <style jsx>{`
-        input[type="text"],
-        select {
-          width: 100%;
-          padding: 12px 20px;
-          margin: 8px 0;
-          display: inline-block;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-          width: 100%;
-          background-color: #4caf50;
-          color: white;
-          padding: 14px 20px;
-          margin: 8px 0;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-          background-color: #45a049;
-        }
-
         div {
           border-radius: 5px;
-          padding: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
           margin-top: 3em;
-          width: 50%;
+          width: 40%;
+          margin-left: auto;
+          margin-right: auto;
+          padding-left: auto;
+          padding-right: auto;
+        }
+        button {
+          background-color: #d888a3;
+          border: none;
+          color: white;
+          text-align: center;
+          text-decoration: none;
+          display: block;
+          font-size: 16px;
           margin-left: auto;
           margin-right: auto;
         }
-        button {
-          background-color:#d888a3;
-          border: none;
-          color: white;
-          padding: 15px 32px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-        }
         label {
-            font-weight: bold;
+          font-weight: bold;
         }
+
+        
       `}</style>
     </div>
-  )
+  );
 }
 
-export default KegForm
+export default KegForm;
