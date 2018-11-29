@@ -35,9 +35,7 @@ function Keg(props) {
       <style jsx>{`
         hr {
           border: 1px solid pink;
-          height: 0.3vh;
           width: 95%;
-          background-color: pink;
         }
       `}</style>
       <div className="col-sm-2">{props.name}</div>

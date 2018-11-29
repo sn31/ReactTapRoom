@@ -125,16 +125,25 @@ function KegList(props) {
           padding: 5px;
           box-shadow: 5px 10px 8px black;
         }
+        .title {
+          text-align: left;
+          margin-left: 1em;
+          margin-bottom: 1em;
+        }
       `}</style>
-      
+      <div className="row title">
+      <h1>Inventory Management</h1>
+      <button className="btn">Add</button>
+      </div>
+    
     <div className="row">
-      <div className="col-sm-2">Name</div>
-      <div className="col-sm-2">Brewer</div>
-      <div className="col-sm-3">Description</div>
-      <div className="col-sm-1">ABV</div>
-      <div className="col-sm-1">Pricing</div>
-      <div className="col-sm-1">Remaining</div>
-      <div className="col-sm-2">Actions</div>
+      <div className="col-sm-2"><strong>Name</strong></div>
+      <div className="col-sm-2"><strong>Brewer</strong></div>
+      <div className="col-sm-3"><strong>Description</strong></div>
+      <div className="col-sm-1"><strong>ABV</strong></div>
+      <div className="col-sm-1"><strong>Pricing</strong></div>
+      <div className="col-sm-1"><strong>Remaining</strong></div>
+      <div className="col-sm-2"><strong>Actions</strong></div>
     </div><hr/>
     {kegs}
     </div>
