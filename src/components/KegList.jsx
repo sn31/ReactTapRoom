@@ -2,7 +2,6 @@ import React from "react";
 import Keg from "./Keg";
 import PropTypes from "prop-types";
 
-
 function KegList(props) {
   const state = {
     masterKegList: [
@@ -99,7 +98,6 @@ function KegList(props) {
           border: 1px solid;
           padding: 5px;
           box-shadow: 5px 10px 8px black;
-
         }
         ul {
           list-style-type: none;
@@ -108,7 +106,6 @@ function KegList(props) {
           display: inline-block;
           margin-right: 1em;
         }
-      
       `}</style>
     </div>
   );
@@ -132,34 +129,50 @@ function KegList(props) {
         }
       `}</style>
       <div className="row title">
-      <h1>Inventory Management</h1>
-      <button className="btn">Add</button>
+        <div className="col-sm-10">
+          <h1>Inventory Management</h1>
+        </div>
+        <div className="col-sm-2">
+          <button className="btn">Add</button>
+        </div>
       </div>
-    
-    <div className="row">
-      <div className="col-sm-2"><strong>Name</strong></div>
-      <div className="col-sm-2"><strong>Brewer</strong></div>
-      <div className="col-sm-3"><strong>Description</strong></div>
-      <div className="col-sm-1"><strong>ABV</strong></div>
-      <div className="col-sm-1"><strong>Pricing</strong></div>
-      <div className="col-sm-1"><strong>Remaining</strong></div>
-      <div className="col-sm-2"><strong>Actions</strong></div>
-    </div><hr/>
-    {kegs}
+
+      <div className="row">
+        <div className="col-sm-2">
+          <strong>Name</strong>
+        </div>
+        <div className="col-sm-2">
+          <strong>Brewer</strong>
+        </div>
+        <div className="col-sm-3">
+          <strong>Description</strong>
+        </div>
+        <div className="col-sm-1">
+          <strong>ABV</strong>
+        </div>
+        <div className="col-sm-1">
+          <strong>Pricing</strong>
+        </div>
+        <div className="col-sm-1">
+          <strong>Remaining</strong>
+        </div>
+        <div className="col-sm-2">
+          <strong>Actions</strong>
+        </div>
+      </div>
+      <hr />
+      {kegs}
     </div>
-  )
- 
-  if (props.currentRouterPath === "/employee")
-  {
+  );
+
+  if (props.currentRouterPath === "/employee") {
     return <div>{privateMenu}</div>;
+  } else {
+    return <div>{publicMenu}</div>;
   }
-  else{
-    return <div>{publicMenu}</div>
-  }
-  
 }
 
 KegList.propTypes = {
-  currentRouterPath:PropTypes.string
-}
+  currentRouterPath: PropTypes.string
+};
 export default KegList;
