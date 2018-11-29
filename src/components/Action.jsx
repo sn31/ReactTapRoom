@@ -9,6 +9,7 @@ function Action(props) {
       <style jsx>{`
         a {
             display:inline-block;
+            float: left;
             border: 1px solid white;
             padding: 0.6em;
             margin: 0.6em;

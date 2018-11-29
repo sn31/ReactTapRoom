@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Keg(props) {
-  return (
+  const publicMenu = (
     <div>
       <h4>{props.name}</h4>
       <ul>
@@ -11,7 +11,8 @@ function Keg(props) {
         <li> {props.abv}</li>
         <li>{props.price}</li>
         <li>{props.remaining} pint</li>
-      </ul><br/>
+      </ul>
+      <br />
       <style jsx>{`
         ul {
           list-style-type: none;
@@ -23,6 +24,25 @@ function Keg(props) {
       `}</style>
     </div>
   );
+
+  const privateMenu = (
+    <div className="row">
+      <div className="col">{props.name}</div>
+      <div className="col">{props.brewer}</div>
+      <div className="col">{props.description}</div>
+      <div className="col">{props.abv}</div>
+      <div className="col">{props.price}</div>
+      <div className="col">{props.remaining}</div>
+    </div>
+  )
+  if (props.currentRouterPath === "/employee")
+  {
+    return <div>{privateMenu}</div>;
+  }
+  else{
+    return <div>{publicMenu}</div>
+  }
+   
 }
 
 Keg.propTypes = {
@@ -34,4 +54,7 @@ Keg.propTypes = {
   remaining: PropTypes.string
 };
 
+Keg.propTypes = {
+  currentRouterPath:PropTypes.string
+}
 export default Keg;
