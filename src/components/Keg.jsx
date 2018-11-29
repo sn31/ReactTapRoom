@@ -1,6 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import ActionList from "./ActionList";
+import React from 'react'
+import PropTypes from 'prop-types'
+import ActionList from './ActionList'
 
 function Keg(props) {
   const publicMenu = (
@@ -28,7 +28,7 @@ function Keg(props) {
         }
       `}</style>
     </div>
-  );
+  )
 
   const privateMenu = (
     <div className="row">
@@ -48,11 +48,11 @@ function Keg(props) {
         <ActionList />
       </div><hr/>
     </div>
-  );
-  if (props.currentRouterPath === "/employee") {
-    return <div>{privateMenu}</div>;
+  )
+  if (props.currentRouterPath === '/employee') {
+    return <div>{privateMenu}</div>
   } else {
-    return <div>{publicMenu}</div>;
+    return <div>{publicMenu}</div>
   }
 }
 
@@ -63,9 +63,9 @@ Keg.propTypes = {
   abv: PropTypes.string,
   price: PropTypes.string,
   remaining: PropTypes.string
-};
+}
 
 Keg.propTypes = {
   currentRouterPath: PropTypes.string
-};
-export default Keg;
+}
+export default Keg

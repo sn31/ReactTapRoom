@@ -1,11 +1,11 @@
-import React from "react";
-import Keg from "./Keg";
-import PropTypes from "prop-types";
-
+import React from 'react'
+import Keg from './Keg'
+import PropTypes from 'prop-types'
+import {Link} from 'react-router-dom'
 function KegList(props) {
   
-  let kegs = [];
-  console.log(props.masterKegList);
+  let kegs = []
+  console.log(props.masterKegList)
   props.masterKegList.map((keg, index) =>
     kegs.push(
       <Keg
@@ -19,10 +19,10 @@ function KegList(props) {
         currentRouterPath={props.currentRouterPath}
       />
     )
-  );
+  )
   const publicMenu = (
     <div>
-      <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>Menu</h1>
+      <h1 style={{ marginTop: '0.0em', paddingTop: '0.5em' }}>Menu</h1>
       <ul>
         <li>Brew</li>
         <li className="dash">|</li>
@@ -56,7 +56,7 @@ function KegList(props) {
         }
       `}</style>
     </div>
-  );
+  )
   const privateMenu = (
     <div className="wrapper">
       <style jsx>{`
@@ -81,7 +81,7 @@ function KegList(props) {
           <h1>Inventory Management</h1>
         </div>
         <div className="col-sm-2">
-          <button className="btn">Add</button>
+          <Link style={{textDecoration:'none',color: 'white'}} to={'/addnewkeg'}>Add New Keg</Link>
         </div>
       </div>
 
@@ -111,17 +111,17 @@ function KegList(props) {
       <hr />
       {kegs}
     </div>
-  );
+  )
 
-  if (props.currentRouterPath === "/employee") {
-    return <div>{privateMenu}</div>;
+  if (props.currentRouterPath === '/employee') {
+    return <div>{privateMenu}</div>
   } else {
-    return <div>{publicMenu}</div>;
+    return <div>{publicMenu}</div>
   }
 }
 
 KegList.propTypes = {
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.array
-};
-export default KegList;
+}
+export default KegList

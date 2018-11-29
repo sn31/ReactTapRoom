@@ -1,27 +1,45 @@
-import React from "react";
+import React from 'react'
 import {
   Form,
   FormGroup,
   Col,
   ControlLabel,
   FormControl
-} from "react-bootstrap";
+} from 'react-bootstrap'
+import PropTypes from 'prop-types'
 
+function KegForm(props) {
+  let _name = null
+  let _brewer = null
+  let _description = null
+  let _abv = null
+  let _remaining = null
+  let _price = null
+  function handleNewKegFormSubmission(event) {
+    event.preventDefault()
+    console.log('Added successfully')
+    props.onNewKegCreation({
+      name: _name.value,
+      brewer: _brewer.value,
+      description: _description.value,
+      abv: _abv,
+      remaining: _remaining,
+      price: _price
+    })
+    _name = ''
+    _brewer = ''
+    _description = ''
+    _abv = ''
+    _remaining = ''
+    _price = ''
+    
+  }
 
-function KegForm() {
-  let _name= null;
-  let _brewer= null;
-  let _description = null;
-  let _abv= null;
-  let _remaining= null;
-  let _price= null;
   return (
     <div>
-      <Form >
+      <Form onSubmit={handleNewKegFormSubmission}>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            Name
-          </Col>
+          <Col componentClass={ControlLabel}>Name</Col>
           <Col>
             <FormControl
               componentClass="input"
@@ -29,15 +47,13 @@ function KegForm() {
               id="name"
               placeholder="Name"
               inputRef={input => {
-                _name = input;
+                _name = input
               }}
             />
           </Col>
         </FormGroup>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            Brewer
-          </Col>
+          <Col componentClass={ControlLabel}>Brewer</Col>
           <Col>
             <FormControl
               componentClass="input"
@@ -45,15 +61,13 @@ function KegForm() {
               id="brewer"
               placeholder="Brewer"
               inputRef={input => {
-                _brewer = input;
+                _brewer = input
               }}
             />
           </Col>
         </FormGroup>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            Description
-          </Col>
+          <Col componentClass={ControlLabel}>Description</Col>
           <Col>
             <FormControl
               componentClass="textarea"
@@ -61,15 +75,13 @@ function KegForm() {
               id="description"
               placeholder="Description"
               inputRef={input => {
-                _description = input;
+                _description = input
               }}
             />
           </Col>
         </FormGroup>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            ABV
-          </Col>
+          <Col componentClass={ControlLabel}>ABV</Col>
           <Col>
             <FormControl
               componentClass="input"
@@ -77,15 +89,13 @@ function KegForm() {
               id="abv"
               placeholder="ABV"
               inputRef={input => {
-                _abv = input;
+                _abv = input
               }}
             />
           </Col>
         </FormGroup>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            Remaining
-          </Col>
+          <Col componentClass={ControlLabel}>Remaining</Col>
           <Col>
             <FormControl
               componentClass="input"
@@ -93,15 +103,13 @@ function KegForm() {
               id="remaining"
               placeholder="Remaining"
               inputRef={input => {
-                _remaining = input;
+                _remaining = input
               }}
             />
           </Col>
         </FormGroup>
         <FormGroup>
-          <Col componentClass={ControlLabel}>
-            Price
-          </Col>
+          <Col componentClass={ControlLabel}>Price</Col>
           <Col>
             <FormControl
               componentClass="input"
@@ -109,12 +117,14 @@ function KegForm() {
               id="price"
               placeholder="Price"
               inputRef={input => {
-                _price = input;
+                _price = input
               }}
             />
           </Col>
         </FormGroup>
-        <button className="btn">Submit</button>
+        <button type="submit" className="btn">
+          Submit
+        </button>
       </Form>
 
       <style jsx>{`
@@ -143,11 +153,12 @@ function KegForm() {
         label {
           font-weight: bold;
         }
-
-        
       `}</style>
     </div>
-  );
+  )
 }
 
-export default KegForm;
+KegForm.propTypes = {
+  onNewKegCreation: PropTypes.func
+}
+export default KegForm

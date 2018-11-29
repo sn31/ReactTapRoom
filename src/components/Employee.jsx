@@ -7,7 +7,7 @@ function Employee(props) {
   return(
     
     <div id="menu" className="col-md-12">
-    <KegList masterKegList={props.masterKegList}currentRouterPath = {props.currentRouterPath}/>
+      <KegList masterKegList={props.masterKegList} currentRouterPath = {props.currentRouterPath}/>
     
     </div>
   )

@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react'
 
 
 function About() {
   return (
     <div>
       
-        <h1>About</h1>
-        <hr />
+      <h1>About</h1>
+      <hr />
 
-        <style jsx>{`
+      <style jsx>{`
           div {
             text-align: center;
             width: 500px;
@@ -18,7 +18,7 @@ function About() {
             box-shadow: 5px 10px 8px black;
           }
         `}</style>
-        <p>
+      <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed augue
           magna, sagittis sed eleifend eu, mattis nec elit. Fusce sit amet
           rutrum sapien. Proin blandit maximus arcu, rhoncus ultricies mi
@@ -26,9 +26,9 @@ function About() {
           malesuada at vitae odio. Nullam pretium varius leo quis accumsan.
           Suspendisse potenti. Ut turpis mauris, consectetur vitae lorem ac,
           aliquam consequat ligula.
-        </p>
+      </p>
 
-        <p>
+      <p>
           Suspendisse potenti. Vivamus nulla lacus, pharetra in blandit ac,
           vulputate quis tellus. Vivamus id eros eros. Quisque id tortor dolor.
           Quisque massa ipsum, venenatis ac nisi vitae, pulvinar vestibulum
@@ -38,8 +38,8 @@ function About() {
           diam aliquet at. Aliquam sit amet feugiat arcu. Vivamus sagittis
           varius ante et rhoncus. Fusce vitae sagittis odio. Cras eu mi ac odio
           tincidunt feugiat vitae eu elit.
-        </p>
-        <p>
+      </p>
+      <p>
           Donec metus risus, mollis eget sapien in, ornare bibendum felis. Ut
           rhoncus commodo est eu mollis. Quisque eu tempus nisl. Morbi malesuada
           pharetra enim nec vulputate. Fusce ut fringilla dolor. Sed dui velit,
@@ -48,8 +48,8 @@ function About() {
           quis tincidunt mauris. Donec rhoncus enim ut efficitur auctor. Nulla
           mollis rhoncus lectus eu finibus. Vivamus ornare in ipsum ac faucibus.
           Suspendisse tincidunt commodo purus, eget egestas diam malesuada eget.
-        </p>
-        <p>
+      </p>
+      <p>
           Sed tempor suscipit turpis a dictum. Aliquam rutrum nisl vel dolor
           euismod, at euismod ligula consectetur. Pellentesque et lacus urna.
           Sed imperdiet, mi non feugiat mattis, nulla magna euismod nulla, at
@@ -59,10 +59,10 @@ function About() {
           torquent per conubia nostra, per inceptos himenaeos. Mauris lacinia
           urna nisl, sit amet scelerisque nisl malesuada vel. Ut dignissim ac
           elit nec facilisis.
-        </p>
+      </p>
      
     </div>
-  );
+  )
 }
 
-export default About;
+export default About

@@ -39,7 +39,7 @@ function NavBar() {
           <Link to="/" style={LinkStyle}>Menu</Link>
         </li>
         <li>
-            <Link to="/employee" style={LinkStyle}>Employee</Link>
+          <Link to="/employee" style={LinkStyle}>Employee</Link>
         </li>
       </ul>
     </div>
