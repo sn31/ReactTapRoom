@@ -87,7 +87,7 @@ class App extends React.Component {
           <Route
             path="/employee"
             render={props => (
-              <Employee currentRouterPath={props.location.pathname} />
+              <Employee masterKegList={this.state.masterKegList} currentRouterPath={props.location.pathname} />
             )}
           />
 

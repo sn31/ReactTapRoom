@@ -7,13 +7,14 @@ function Employee(props) {
   return(
     
     <div id="menu" className="col-md-12">
-    <KegList currentRouterPath = {props.currentRouterPath}/>
+    <KegList masterKegList={props.masterKegList}currentRouterPath = {props.currentRouterPath}/>
     
     </div>
   )
 }
 
 Employee.propTypes = {
-  currentRouterPath:PropTypes.string.isRequired
+  currentRouterPath:PropTypes.string.isRequired,
+  masterKegList: PropTypes.array
 }
 export default Employee

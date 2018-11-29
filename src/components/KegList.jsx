@@ -4,9 +4,8 @@ import PropTypes from "prop-types";
 
 function KegList(props) {
   
-
   let kegs = [];
-
+  console.log(props.masterKegList);
   props.masterKegList.map((keg, index) =>
     kegs.push(
       <Keg
