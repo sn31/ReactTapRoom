@@ -11,8 +11,8 @@ function Action(props) {
             display:inline-block;
             float: left;
             border: 1px solid white;
-            padding: 0.6em;
-            margin: 0.6em;
+            padding: 0.2em;
+            margin: 0 0.2em 0 0.2em;
             background-color: black;
             border-radius: 5px;
         }

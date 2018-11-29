@@ -5,12 +5,10 @@ import PropTypes from 'prop-types'
 
 function Employee(props) {
   return(
-    <div className="row" style={{marginRight:'0'}}>
-    <div id="menu" className="col-md-6">
+    
+    <div id="menu" className="col-md-12">
     <KegList currentRouterPath = {props.currentRouterPath}/>
-    </div>
-    <div className="col-md-6">
-    <ActionList/><br/></div>
+    
     </div>
   )
 }

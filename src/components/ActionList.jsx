@@ -4,9 +4,10 @@ import Action from './Action'
 
 function ActionList() {
   const actionList= [
-    {action:'Add New Keg',route:'addnewkeg'},
-    {action:'Edit Keg',route:'editkeg'},
-    {action:'Delete Keg',route:'deletekeg'}
+    // {action:'Add New Keg',route:'addnewkeg'},
+    {action:'Edit',route:'editkeg'},
+    {action:'Delete',route:'deletekeg'},
+    {action:'Discount'}
   ] 
   let actions=[]
 
@@ -24,7 +25,7 @@ function ActionList() {
       <style jsx>{`
         div {
             text-align: center;
-            margin-top: 1.5em;
+           
         }
       
       `}</style>

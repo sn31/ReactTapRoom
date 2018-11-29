@@ -2,6 +2,7 @@ import React from "react";
 import Keg from "./Keg";
 import PropTypes from "prop-types";
 
+
 function KegList(props) {
   const state = {
     masterKegList: [
@@ -117,7 +118,7 @@ function KegList(props) {
         .wrapper {
           text-align: center;
           background-color: rgba(144, 148, 155, 0.8);
-          width: 95%;
+          width: 98%;
           margin: 0.5em auto 0.5em auto;
           height: 95vh;
           border: 1px solid;
@@ -125,14 +126,15 @@ function KegList(props) {
           box-shadow: 5px 10px 8px black;
         }
       `}</style>
-       <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>Inventory</h1>
+      
     <div className="row">
-      <div className="col">Name</div>
-      <div className="col">Brewer</div>
-      <div className="col">Description</div>
-      <div className="col">ABV</div>
-      <div className="col">Pricing</div>
-      <div className="col">Remaining</div>
+      <div className="col-sm-2">Name</div>
+      <div className="col-sm-2">Brewer</div>
+      <div className="col-sm-3">Description</div>
+      <div className="col-sm-1">ABV</div>
+      <div className="col-sm-1">Pricing</div>
+      <div className="col-sm-1">Remaining</div>
+      <div className="col-sm-2">Actions</div>
     </div><hr/>
     {kegs}
     </div>
