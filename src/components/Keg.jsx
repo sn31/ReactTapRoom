@@ -7,20 +7,26 @@ function Keg(props) {
       <h4>{props.name}</h4>
       <ul>
         <li>{props.brewer}</li>
+        <li className="dash">|</li>
         <li>{props.description}</li>
+        <li className="dash">|</li>
         <li> {props.abv}</li>
+        <li className="dash">|</li>
         <li>{props.price}</li>
+        <li className="dash">|</li>
         <li>{props.remaining} pint</li>
       </ul>
       <br />
       <style jsx>{`
         ul {
           list-style-type: none;
+     
         }
         li {
           display: inline-block;
           margin-right: 1em;
         }
+       
       `}</style>
     </div>
   );

@@ -74,12 +74,16 @@ function KegList(props) {
   );
   const publicMenu = (
     <div>
-      <h1 style={{ marginTop: "0.0em", paddingTop: "1em" }}>Menu</h1>
+      <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>Menu</h1>
       <ul>
         <li>Brew</li>
+        <li className="dash">|</li>
         <li>Description</li>
+        <li className="dash">|</li>
         <li>ABV</li>
+        <li className="dash">|</li>
         <li>Price</li>
+        <li className="dash">|</li>
         <li>Inventory</li>
       </ul>
       <hr />
@@ -88,12 +92,13 @@ function KegList(props) {
         div {
           text-align: center;
           background-color: rgba(144, 148, 155, 0.8);
-          width: 95%;
+          width: 42%;
           margin: 0.5em auto 0.5em auto;
           height: 95vh;
           border: 1px solid;
           padding: 5px;
           box-shadow: 5px 10px 8px black;
+
         }
         ul {
           list-style-type: none;
@@ -102,6 +107,7 @@ function KegList(props) {
           display: inline-block;
           margin-right: 1em;
         }
+      
       `}</style>
     </div>
   );
@@ -119,6 +125,7 @@ function KegList(props) {
           box-shadow: 5px 10px 8px black;
         }
       `}</style>
+       <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>Inventory</h1>
     <div className="row">
       <div className="col">Name</div>
       <div className="col">Brewer</div>
@@ -131,14 +138,14 @@ function KegList(props) {
     </div>
   )
  
-  // if (props.currentRouterPath === "/")
-  // {
-  //   return <div>{publicMenu}</div>;
-  // }
-  // else{
-  //   return <div>{privateMenu}</div>
-  // }
-  return <div>{publicMenu}</div>; 
+  if (props.currentRouterPath === "/employee")
+  {
+    return <div>{privateMenu}</div>;
+  }
+  else{
+    return <div>{publicMenu}</div>
+  }
+  
 }
 
 KegList.propTypes = {
