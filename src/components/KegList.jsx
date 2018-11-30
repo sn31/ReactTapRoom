@@ -20,7 +20,6 @@ function KegList(props) {
         key={kegId}
         kegId = {kegId}
         currentRouterPath={props.currentRouterPath}
-        onSelectedKegId={props.onSelectedKegId}
       />
     )
   })
@@ -89,12 +88,12 @@ function KegList(props) {
         }
       `}</style>
      
-        <div className="title">
-          <h1>Inventory Management</h1>
-        </div>
-        <div id="addButton">
+      <div className="title">
+        <h1>Inventory Management</h1>
+      </div>
+      <div id="addButton">
         <Link style={{textDecoration:'none',color: 'white', border:'1px solid white', padding:'0.3em'}} to='/addnewkeg'><strong>Add New Keg</strong></Link>
-        </div><hr/>
+      </div><hr/>
       
 
       <div className="row">
@@ -137,6 +136,5 @@ KegList.propTypes = {
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.object,
   onNewKegCreation: PropTypes.func,
-  onSelectedKegId: PropTypes.func
 }
 export default KegList

@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function Action(props) {
   return(
     <div>
-     <Link style={{textDecoration:'none',color: 'white'}} to={'/' + props.route+'/'+props.kegId}><strong>{props.action}</strong></Link>
+      <Link style={{textDecoration:'none',color: 'white'}} to={'/' + props.route+'/'+props.kegId}><strong>{props.action}</strong></Link>
       <style jsx>{`
         
         div {
@@ -20,7 +20,6 @@ Action.propTypes = {
   action: PropTypes.string,
   route: PropTypes.string,
   kegId: PropTypes.string,
-  onSelectedKegId: PropTypes.func
 }
 
 export default Action
