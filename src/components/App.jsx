@@ -68,6 +68,7 @@ class App extends React.Component {
   handleAddingNewKeg(newKeg) {
    
     var newMasterKegList = this.state.masterKegList.slice();
+    console.log(newMasterKegList);
     newMasterKegList.push(newKeg); 
     this.setState({ masterKegList: newMasterKegList });
   }
@@ -100,7 +101,7 @@ class App extends React.Component {
           />
           <Route
             path="/employee"
-            render={props => (
+            render={(props) => (
               <Employee
                 masterKegList={this.state.masterKegList}
                 currentRouterPath={props.location.pathname}

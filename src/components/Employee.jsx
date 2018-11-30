@@ -16,7 +16,7 @@ function Employee(props) {
           />
         </div>
         <div className="col-sm-4">
-        <KegForm/>
+        <KegForm onNewKegCreation={props.onNewKegCreation}/>
         </div>
       </div>
     );
@@ -37,7 +37,7 @@ Employee.propTypes = {
   currentRouterPath: PropTypes.string.isRequired,
   masterKegList: PropTypes.array,
   onNewKegCreation: PropTypes.func,
-  onKegFormClicked: PropTypes.funct,
+  onKegFormClicked: PropTypes.func,
   kegFormShown: PropTypes.bool
 };
 export default Employee;

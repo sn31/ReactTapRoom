@@ -8,7 +8,6 @@ function KegList(props) {
     props.onKegFormClicked();
   }
   let kegs = []
-  console.log(props.masterKegList)
   props.masterKegList.map((keg, index) =>
     kegs.push(
       <Keg

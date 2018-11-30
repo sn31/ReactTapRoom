@@ -23,9 +23,9 @@ function KegForm(props) {
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
-      abv: _abv,
-      price: _price,
-      remaining: _remaining,
+      abv: _abv.value,
+      price: _price.value,
+      remaining: _remaining.value,
     })
 
     _name.value = ''
@@ -87,7 +87,7 @@ function KegForm(props) {
           <Col>
             <FormControl
               componentClass="input"
-              type="number"
+              type="text"
               id="abv"
               placeholder="ABV"
               inputRef={input => {
@@ -101,7 +101,7 @@ function KegForm(props) {
           <Col>
             <FormControl
               componentClass="input"
-              type="number"
+              type="text"
               id="remaining"
               placeholder="Remaining"
               inputRef={input => {
@@ -115,7 +115,7 @@ function KegForm(props) {
           <Col>
             <FormControl
               componentClass="input"
-              type="number"
+              type="text"
               id="price"
               placeholder="Price"
               inputRef={input => {
