@@ -9,8 +9,6 @@ function KegList(props) {
   {Object.keys(props.masterKegList).map((kegId) =>{
    
     var keg = props.masterKegList[kegId]
-    console.log(keg)
-    console.log(kegId)
     kegs.push(
       <Keg
         name={keg.name}
@@ -129,7 +127,7 @@ function KegList(props) {
 KegList.propTypes = {
   kegId:PropTypes.string,
   currentRouterPath: PropTypes.string,
-  masterKegList: PropTypes.array,
+  masterKegList: PropTypes.object,
   onNewKegCreation: PropTypes.func
 }
 export default KegList

@@ -14,7 +14,7 @@ function Employee(props) {
 
 Employee.propTypes = {
   currentRouterPath:PropTypes.string.isRequired,
-  masterKegList: PropTypes.array,
+  masterKegList: PropTypes.object,
   onNewKegCreation: PropTypes.func
 }
 export default Employee
