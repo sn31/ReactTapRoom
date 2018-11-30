@@ -27,7 +27,26 @@ function KegForm(props) {
       abv: _abv.value,
       price: _price.value,
       remaining: _remaining.value,
-      id: v4()
+    })
+
+    _name.value = ''
+    _brewer.value = ''
+    _description.value = ''
+    _abv.value = ''
+    _remaining.value = ''
+    _price.value = ''
+    
+  }
+  function handleEditKegFormSubmission(event) {
+    event.preventDefault()
+    alert('Editted successfully')
+    props.onKegEdited({
+      name: _name.value,
+      brewer: _brewer.value,
+      description: _description.value,
+      abv: _abv.value,
+      price: _price.value,
+      remaining: _remaining.value,
     })
 
     _name.value = ''

@@ -5,8 +5,12 @@ import {Link} from 'react-router-dom'
 function KegList(props) {
   
   let kegs = []
-  console.log(props.masterKegList)
-  props.masterKegList.map((keg) =>
+
+  {Object.keys(props.masterKegList).map((kegId) =>{
+   
+  var keg = props.masterKegList[kegId];
+  console.log(keg)
+  console.log(kegId);
     kegs.push(
       <Keg
         name={keg.name}
@@ -15,11 +19,13 @@ function KegList(props) {
         abv={keg.abv}
         price={keg.price}
         remaining={keg.remaining}
-        key={keg.id}
+        key={kegId}
+        kegId = {kegId}
         currentRouterPath={props.currentRouterPath}
       />
     )
-  )
+  })
+}
   const publicMenu = (
     <div>
       <h1 style={{ marginTop: '0.0em', paddingTop: '0.5em' }}>Menu</h1>
@@ -121,6 +127,7 @@ function KegList(props) {
 }
 
 KegList.propTypes = {
+  kegId:PropTypes.string,
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.array,
   onNewKegCreation: PropTypes.func

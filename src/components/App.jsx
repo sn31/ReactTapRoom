@@ -13,9 +13,8 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: [
-        {
-          id: v4(),
+      masterKegList: {
+        "44c1ce37-776d-41b6-af8f-8b119bf6b334" : {
           name: "Ruby Zozzle",
           brewer: "Hi-Wheel",
           description: "Sparkling Wine & Grapefruit",
@@ -23,8 +22,9 @@ class App extends React.Component {
           price: "7",
           remaining: "20"
         },
+        "d47d46fc-c738-4a93-877c-3495a61d799f":
         {
-          id: v4(),
+          
           name: "Tart N Juicy",
           brewer: "Epic",
           description: "Sour IPA",
@@ -32,8 +32,9 @@ class App extends React.Component {
           price: "6",
           remaining: "60"
         },
+        "4ea7b68e-d524-43c7-b783-d0d07858d4fe":
         {
-          id: v4(),
+         
           name: "Hamm's",
           brewer: "Miller/Coors",
           description: "American Lager",
@@ -41,6 +42,7 @@ class App extends React.Component {
           price: "3",
           remaining: "65"
         },
+        "350c32eb-8c1b-4118-a17e-0752737787f9":
         {
           id: v4(),
           name: "Prismatic",
@@ -50,6 +52,7 @@ class App extends React.Component {
           price: "6",
           remaining: "75"
         },
+        "244f4990-023c-4049-9d4e-2c8031445f76":
         {
           id: v4(),
           name: "Juicy Haze",
@@ -59,8 +62,9 @@ class App extends React.Component {
           price: "6",
           remaining: "18"
         },
+        "ba3ef44c-1c70-48ca-989d-ef547accf164":
         {
-          id: v4(),
+         
           name: "8 Hop",
           brewer: "New Belgium",
           description: "Pale Ale",
@@ -68,16 +72,21 @@ class App extends React.Component {
           price: "6",
           remaining: "58"
         }
-      ]
+      }
     };
   }
-  handleAddingNewKeg(newKeg) {
-    var newMasterKegList = this.state.masterKegList.slice();
-    newMasterKegList.push(newKeg); 
 
+  handleAddingNewKeg(newKeg) {
+    var newKegId = v4();
+    var newMasterKegList = Object.assign({},this.state.masterKegList,{
+      [newKegId]: newKeg
+    });
     this.setState({ masterKegList: newMasterKegList });
   }
-
+  handleEditKeg(kegId)
+  {
+    console.log("Edit keg");
+  }
   render() {
     return (
       <div>
