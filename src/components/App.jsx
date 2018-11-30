@@ -20,24 +20,24 @@ class App extends React.Component {
           brewer: "Hi-Wheel",
           description: "Sparkling Wine & Grapefruit",
           abv: "6.8%",
-          price: "7",
-          remaining: "20"
+          price: "$7",
+          remaining: "20 pints"
         },
         "d47d46fc-c738-4a93-877c-3495a61d799f": {
           name: "Tart N Juicy",
           brewer: "Epic",
           description: "Sour IPA",
           abv: "4.5%",
-          price: "6",
-          remaining: "60"
+          price: "$6",
+          remaining: "60 pints"
         },
         "4ea7b68e-d524-43c7-b783-d0d07858d4fe": {
           name: "Hamm's",
           brewer: "Miller/Coors",
           description: "American Lager",
           abv: "4.7%",
-          price: "3",
-          remaining: "65"
+          price: "$3",
+          remaining: "65 pints"
         },
         "350c32eb-8c1b-4118-a17e-0752737787f9": {
           id: v4(),
@@ -45,8 +45,8 @@ class App extends React.Component {
           brewer: "Ninkasi",
           description: "Juicy IPA",
           abv: "5.9%",
-          price: "6",
-          remaining: "75"
+          price: "$6",
+          remaining: "75 pints"
         },
         "244f4990-023c-4049-9d4e-2c8031445f76": {
           id: v4(),
@@ -54,16 +54,16 @@ class App extends React.Component {
           brewer: "New Belgium",
           description: "India Pale Ale",
           abv: "7.5%",
-          price: "6",
-          remaining: "18"
+          price: "$6",
+          remaining: "18 pints"
         },
         "ba3ef44c-1c70-48ca-989d-ef547accf164": {
           name: "8 Hop",
           brewer: "New Belgium",
           description: "Pale Ale",
           abv: "5.5%",
-          price: "6",
-          remaining: "58"
+          price: "$6",
+          remaining: "58 pints"
         }
       },
       kegId: null
@@ -119,6 +119,7 @@ class App extends React.Component {
               <KegForm
                 currentRouterPath={props.location.pathname}
                 onNewKegCreation={this.handleAddingNewKeg.bind(this)}
+                masterKegList={this.state.masterKegList}
               />
             )}
           />
@@ -128,6 +129,7 @@ class App extends React.Component {
               <KegForm
                 currentRouterPath={props.location.pathname}
                 onEditingKeg={this.handleEditKeg.bind(this)}
+                masterKegList={this.state.masterKegList}
               />
             )}
           />
