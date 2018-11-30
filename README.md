@@ -1,8 +1,8 @@
 # React Tap Room
 
-![Screenshot](./src/assets/images/TapRoom.png)
+![Screenshot](./src/assets/images/TapRoom2.png)
 
-## Epicodus Independent Project Week 1 - React - November 16th, 2018
+## Epicodus Independent Project Week 1 - React - November 30th, 2018
 
 ### By **Skye Nguyen**
 
@@ -37,4 +37,3 @@ Skye Nguyen - @sn31 - skye@dames.es
 
 * JavaScript
 * React
-* Firebase
