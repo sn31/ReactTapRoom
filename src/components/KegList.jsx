@@ -1,32 +1,31 @@
-import React from 'react'
-import Keg from './Keg'
-import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+import React from "react";
+import Keg from "./Keg";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 function KegList(props) {
-  
-  let kegs = []
+  let kegs = [];
 
-  {Object.keys(props.masterKegList).map((kegId) =>{
-   
-    var keg = props.masterKegList[kegId]
-    kegs.push(
-      <Keg
-        name={keg.name}
-        brewer={keg.brewer}
-        description={keg.description}
-        abv={keg.abv}
-        price={keg.price}
-        remaining={keg.remaining}
-        key={kegId}
-        kegId = {kegId}
-        currentRouterPath={props.currentRouterPath}
-      />
-    )
-  })
+  {
+    Object.keys(props.masterKegList).map(kegId => {
+      var keg = props.masterKegList[kegId];
+      kegs.push(
+        <Keg
+          name={keg.name}
+          brewer={keg.brewer}
+          description={keg.description}
+          abv={keg.abv}
+          price={keg.price}
+          remaining={keg.remaining}
+          key={kegId}
+          kegId={kegId}
+          currentRouterPath={props.currentRouterPath}
+        />
+      );
+    });
   }
   const publicMenu = (
     <div>
-      <h1 style={{ marginTop: '0.0em', paddingTop: '0.5em' }}>Menu</h1>
+      <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>Menu</h1>
       <ul>
         <li>Brew</li>
         <li className="dash">|</li>
@@ -46,8 +45,7 @@ function KegList(props) {
           background-color: rgba(144, 148, 155, 0.8);
           width: 42%;
           margin: 0.5em auto 0.5em auto;
-         
-          border: 1px solid;
+          border: 1px solid white;
           padding: 5px;
           box-shadow: 5px 10px 8px black;
         }
@@ -60,7 +58,7 @@ function KegList(props) {
         }
       `}</style>
     </div>
-  )
+  );
   const privateMenu = (
     <div className="wrapper">
       <style jsx>{`
@@ -87,14 +85,24 @@ function KegList(props) {
           background-color: black;
         }
       `}</style>
-     
+
       <div className="title">
         <h1>Inventory Management</h1>
       </div>
       <div id="addButton">
-        <Link style={{textDecoration:'none',color: 'white', border:'1px solid white', padding:'0.3em'}} to='/addnewkeg'><strong>Add New Keg</strong></Link>
-      </div><hr/>
-      
+        <Link
+          style={{
+            textDecoration: "none",
+            color: "white",
+            border: "1px solid white",
+            padding: "0.3em"
+          }}
+          to="/addnewkeg"
+        >
+          <strong>Add New Keg</strong>
+        </Link>
+      </div>
+      <hr />
 
       <div className="row">
         <div className="col-sm-2">
@@ -122,19 +130,19 @@ function KegList(props) {
       <hr />
       {kegs}
     </div>
-  )
+  );
 
-  if (props.currentRouterPath === '/employee') {
-    return <div>{privateMenu}</div>
+  if (props.currentRouterPath === "/employee") {
+    return <div>{privateMenu}</div>;
   } else {
-    return <div>{publicMenu}</div>
+    return <div>{publicMenu}</div>;
   }
 }
 
 KegList.propTypes = {
-  kegId:PropTypes.string,
+  kegId: PropTypes.string,
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.object,
-  onNewKegCreation: PropTypes.func,
-}
-export default KegList
+  onNewKegCreation: PropTypes.func
+};
+export default KegList;

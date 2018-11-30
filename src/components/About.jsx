@@ -5,17 +5,18 @@ function About() {
   return (
     <div>
       
-      <h1>About</h1>
+      <h1 style={{ marginTop: "0.0em", paddingTop: "0.5em" }}>About</h1>
       <hr />
 
       <style jsx>{`
           div {
+            margin: 0.5em auto 0.5em auto;
             text-align: center;
-            width: 500px;
+            width: 42%;
             background-color: rgba(144, 148, 155, 0.8);
-            padding: 0.8em;
-            margin: 0.5em;
+            padding: 5px;
             box-shadow: 5px 10px 8px black;
+            border: 1px solid white;
           }
         `}</style>
       <p>

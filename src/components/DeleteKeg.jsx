@@ -11,17 +11,23 @@ function DeleteKeg(props) {
   }
   return (
     <div>
+      <div id="confirmation">
       <h1>Are you sure you want to delete this keg?</h1>
 
       <button onClick={handleDeleteConfirmation}>Submit</button>
+      </div>
       <style jsx>{`
         div {
           text-align: center;
-          padding: 20px;
-          margin-top: 3em;
-          width: 50%;
-          margin-left: auto;
-          margin-right: auto;
+          padding: 2em;
+          margin: 3em auto auto auto;
+          height: 100vh;
+        }
+        #confirmation{
+          background-color: rgba(144, 148, 155, 0.8);
+          height: 30%;
+          border: 1px solid white;
+  
         }
         button {
           background-color: black;
@@ -30,7 +36,6 @@ function DeleteKeg(props) {
           padding: 7px 16px;
           text-align: center;
           text-decoration: none;
-          display: inline-block;
           font-size: 16px;
           margin-top: 1em;
         }
