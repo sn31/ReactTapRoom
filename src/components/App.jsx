@@ -7,6 +7,7 @@ import KegForm from "./KegForm";
 import background from "../assets/images/bg2.jpg";
 import About from "./About";
 import Error404 from "./Error404";
+import {v4} from 'uuid';
 
 class App extends React.Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class App extends React.Component {
     this.state = {
       masterKegList: [
         {
+          id: v4(),
           name: "Ruby Zozzle",
           brewer: "Hi-Wheel",
           description: "Sparkling Wine & Grapefruit",
@@ -22,6 +24,7 @@ class App extends React.Component {
           remaining: "20"
         },
         {
+          id: v4(),
           name: "Tart N Juicy",
           brewer: "Epic",
           description: "Sour IPA",
@@ -30,6 +33,7 @@ class App extends React.Component {
           remaining: "60"
         },
         {
+          id: v4(),
           name: "Hamm's",
           brewer: "Miller/Coors",
           description: "American Lager",
@@ -38,6 +42,7 @@ class App extends React.Component {
           remaining: "65"
         },
         {
+          id: v4(),
           name: "Prismatic",
           brewer: "Ninkasi",
           description: "Juicy IPA",
@@ -46,6 +51,7 @@ class App extends React.Component {
           remaining: "75"
         },
         {
+          id: v4(),
           name: "Juicy Haze",
           brewer: "New Belgium",
           description: "India Pale Ale",
@@ -54,6 +60,7 @@ class App extends React.Component {
           remaining: "18"
         },
         {
+          id: v4(),
           name: "8 Hop",
           brewer: "New Belgium",
           description: "Pale Ale",

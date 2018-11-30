@@ -6,7 +6,7 @@ function KegList(props) {
   
   let kegs = []
   console.log(props.masterKegList)
-  props.masterKegList.map((keg, index) =>
+  props.masterKegList.map((keg) =>
     kegs.push(
       <Keg
         name={keg.name}
@@ -15,7 +15,7 @@ function KegList(props) {
         abv={keg.abv}
         price={keg.price}
         remaining={keg.remaining}
-        key={index}
+        key={keg.id}
         currentRouterPath={props.currentRouterPath}
       />
     )

@@ -7,6 +7,7 @@ import {
   FormControl
 } from 'react-bootstrap'
 import PropTypes from 'prop-types'
+import { v4 } from 'uuid';
 
 function KegForm(props) {
   let _name = null
@@ -26,6 +27,7 @@ function KegForm(props) {
       abv: _abv.value,
       price: _price.value,
       remaining: _remaining.value,
+      id: v4()
     })
 
     _name.value = ''
