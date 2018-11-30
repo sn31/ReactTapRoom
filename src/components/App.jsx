@@ -3,7 +3,7 @@ import Header from "./Header";
 import { Switch, Route } from "react-router-dom";
 import KegList from "./KegList";
 import Employee from "./Employee";
-
+import KegForm from "./KegForm";
 import background from "../assets/images/bg2.jpg";
 import About from "./About";
 import Error404 from "./Error404";
@@ -94,6 +94,10 @@ class App extends React.Component {
             path="/"
             render={() => <KegList masterKegList={this.state.masterKegList} />}
           />
+          
+          <Route path="/addnewkeg" render={()=><KegForm onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/>
+          {/* <Route path="/editkeg" render={()=><KegForm onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/> */}
+          
           <Route
             path="/employee"
             render={props => (

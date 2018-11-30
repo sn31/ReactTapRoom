@@ -23,9 +23,9 @@ function KegForm(props) {
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
-      abv: _abv,
-      price: _price,
-      remaining: _remaining,
+      abv: _abv.value,
+      price: _price.value,
+      remaining: _remaining.value,
     })
 
     _name.value = ''
