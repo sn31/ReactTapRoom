@@ -3,6 +3,14 @@ import PropTypes from 'prop-types'
 import ActionList from './ActionList'
 
 function Keg(props) {
+  function handleEditFormClicked() {
+    console.log("Edit was clicked");
+  }
+
+  function handleDeleteFormClicked() {
+    console.log("Delete was clicked");
+  }
+
   const publicMenu = (
     <div>
       <h4>{props.name}</h4>
@@ -45,7 +53,8 @@ function Keg(props) {
       <div className="col-sm-1">{props.price}</div>
       <div className="col-sm-1">{props.remaining}</div>
       <div className="col-sm-2">
-        <ActionList />
+        <button onClick={handleEditFormClicked} className="btn">Edit</button>
+        <button onClick={handleDeleteFormClicked} className="btn">Delete</button>
       </div><hr/>
     </div>
   )
@@ -62,10 +71,9 @@ Keg.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string,
   price: PropTypes.string,
-  remaining: PropTypes.string
-}
-
-Keg.propTypes = {
+  remaining: PropTypes.string,
+  onNewKegCreation: PropTypes.func,
   currentRouterPath: PropTypes.string
 }
+
 export default Keg

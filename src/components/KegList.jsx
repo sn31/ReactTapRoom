@@ -17,6 +17,7 @@ function KegList(props) {
         remaining={keg.remaining}
         key={index}
         currentRouterPath={props.currentRouterPath}
+        kegFormShown ={props.kegFormShown}
       />
     )
   )

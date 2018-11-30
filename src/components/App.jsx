@@ -61,13 +61,14 @@ class App extends React.Component {
           price: "6",
           remaining: "58"
         }
-      ]
+      ],
+      kegFormShown:false
     };
   }
   handleAddingNewKeg(newKeg) {
+    this.setState({kegFormShown: !kegFormShown});
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg); 
-
     this.setState({ masterKegList: newMasterKegList });
   }
 
@@ -101,6 +102,7 @@ class App extends React.Component {
                 masterKegList={this.state.masterKegList}
                 currentRouterPath={props.location.pathname}
                 onNewKegCreation={this.handleAddingNewKeg.bind(this)}
+                kegFormShown={this.state.kegFormShown}
               />
             )}
           />
