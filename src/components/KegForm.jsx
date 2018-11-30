@@ -60,7 +60,7 @@ function KegForm(props) {
 
   return (
     <div>
-      <Form onSubmit={(props.currentRouterPath === "/addnewkeg") ? handleNewKegFormSubmission : handleEditKegFormSubmission}>
+      <Form onSubmit={(props.currentRouterPath === '/addnewkeg') ? handleNewKegFormSubmission : handleEditKegFormSubmission}>
         <FormGroup>
           <Col componentClass={ControlLabel}>Name</Col>
           <Col>

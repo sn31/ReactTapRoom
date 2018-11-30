@@ -45,7 +45,7 @@ module.exports = {
         exclude: /node_modules/,
         options: {
           presets: [["es2015", { modules: false }], "react"],
-          plugins: ["react-hot-loader/babel", "styled-jsx/babel"]
+          plugins: ["react-hot-loader/babel", "styled-jsx/babel",["transform-object-rest-spread"]]
         }
       },
       {
@@ -68,6 +68,6 @@ module.exports = {
       appMountId: "react-app-root", //HTML's root DOM node
       title: "Tap Room",
       filename: resolve(__dirname, "build", "index.html")
-    })
+    }),
   ]
 };

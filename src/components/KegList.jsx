@@ -8,9 +8,9 @@ function KegList(props) {
 
   {Object.keys(props.masterKegList).map((kegId) =>{
    
-  var keg = props.masterKegList[kegId];
-  console.log(keg)
-  console.log(kegId);
+    var keg = props.masterKegList[kegId]
+    console.log(keg)
+    console.log(kegId)
     kegs.push(
       <Keg
         name={keg.name}
@@ -25,7 +25,7 @@ function KegList(props) {
       />
     )
   })
-}
+  }
   const publicMenu = (
     <div>
       <h1 style={{ marginTop: '0.0em', paddingTop: '0.5em' }}>Menu</h1>
