@@ -111,8 +111,8 @@ class App extends React.Component {
             render={() => <KegList masterKegList={this.state.masterKegList} />}
           />
           
-          <Route path="/addnewkeg" render={()=><KegForm onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/>
-          {/* <Route path="/editkeg" render={()=><KegForm onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/> */}
+          <Route path="/addnewkeg" render={(props)=><KegForm currentRouterPath={props.location.pathname} onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/>
+          <Route path="/editkeg" render={(props)=><KegForm currentRouterPath={props.location.pathname} onEditingKeg={this.handleEditKeg.bind(this)}/>}/>
           
           <Route
             path="/employee"

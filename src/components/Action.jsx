@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 function Action(props) {
   return(
     <div>
-      <a><Link kegId={props.kegId} style={{textDecoration:'none',color: 'white'}} to={'/' + props.route}>{props.action}</Link></a>
+      <a><Link style={{textDecoration:'none',color: 'white'}} to={'/' + props.route}>{props.action}</Link></a>
       <style jsx>{`
         a {
             display:inline-block;

@@ -7,7 +7,7 @@ import {
   FormControl
 } from 'react-bootstrap'
 import PropTypes from 'prop-types'
-import { v4 } from 'uuid';
+
 
 function KegForm(props) {
   let _name = null
@@ -40,7 +40,7 @@ function KegForm(props) {
   function handleEditKegFormSubmission(event) {
     event.preventDefault()
     alert('Editted successfully')
-    props.onKegEdited({
+    props.onEditingKeg({
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
@@ -60,7 +60,7 @@ function KegForm(props) {
 
   return (
     <div>
-      <Form onSubmit={handleNewKegFormSubmission}>
+      <Form onSubmit={(props.currentRouterPath === "/addnewkeg") ? handleNewKegFormSubmission : handleEditKegFormSubmission}>
         <FormGroup>
           <Col componentClass={ControlLabel}>Name</Col>
           <Col>
@@ -182,6 +182,8 @@ function KegForm(props) {
 }
 
 KegForm.propTypes = {
-  onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func,
+  onEditingKeg: PropTypes.func,
+  currentRouterPath: PropTypes.string
 }
 export default KegForm
