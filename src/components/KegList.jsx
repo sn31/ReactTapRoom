@@ -3,7 +3,10 @@ import Keg from './Keg'
 import PropTypes from 'prop-types'
 import {Link} from 'react-router-dom'
 function KegList(props) {
-  
+  function handleAddFormClicked() {
+    console.log("Add was clicked");
+    props.onKegFormClicked();
+  }
   let kegs = []
   console.log(props.masterKegList)
   props.masterKegList.map((keg, index) =>
@@ -17,7 +20,7 @@ function KegList(props) {
         remaining={keg.remaining}
         key={index}
         currentRouterPath={props.currentRouterPath}
-        kegFormShown ={props.kegFormShown}
+        onKegFormClicked ={props.onKegFormClicked}
       />
     )
   )
@@ -82,7 +85,7 @@ function KegList(props) {
           <h1>Inventory Management</h1>
         </div>
         <div className="col-sm-2">
-          <Link style={{textDecoration:'none',color: 'white'}} to='/addnewkeg'>Add New Keg</Link>
+        <button onClick={handleAddFormClicked} className="btn">Add</button>
         </div>
       </div>
 
@@ -124,6 +127,7 @@ function KegList(props) {
 KegList.propTypes = {
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.array,
-  onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func,
+  onKegFormClicked: PropTypes.func
 }
 export default KegList

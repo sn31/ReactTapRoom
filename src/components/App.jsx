@@ -66,12 +66,15 @@ class App extends React.Component {
     };
   }
   handleAddingNewKeg(newKeg) {
-    this.setState({kegFormShown: !kegFormShown});
+   
     var newMasterKegList = this.state.masterKegList.slice();
     newMasterKegList.push(newKeg); 
     this.setState({ masterKegList: newMasterKegList });
   }
-
+  handleKegFormClicked() {
+    console.log(this.state.kegFormShown);
+    this.setState({kegFormShown: !this.state.kegFormShown});
+  }
   render() {
     return (
       <div>
@@ -102,6 +105,7 @@ class App extends React.Component {
                 masterKegList={this.state.masterKegList}
                 currentRouterPath={props.location.pathname}
                 onNewKegCreation={this.handleAddingNewKeg.bind(this)}
+                onKegFormClicked={this.handleKegFormClicked.bind(this)}
                 kegFormShown={this.state.kegFormShown}
               />
             )}

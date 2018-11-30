@@ -5,6 +5,7 @@ import ActionList from './ActionList'
 function Keg(props) {
   function handleEditFormClicked() {
     console.log("Edit was clicked");
+    props.onKegFormClicked();
   }
 
   function handleDeleteFormClicked() {
@@ -73,7 +74,8 @@ Keg.propTypes = {
   price: PropTypes.string,
   remaining: PropTypes.string,
   onNewKegCreation: PropTypes.func,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onKegFormClicked: PropTypes.func
 }
 
 export default Keg
