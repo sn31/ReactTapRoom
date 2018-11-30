@@ -45,7 +45,7 @@ function Keg(props) {
       <div className="col-sm-1">{props.price}</div>
       <div className="col-sm-1">{props.remaining}</div>
       <div className="col-sm-2">
-        <ActionList kegId={props.id}/>
+        <ActionList onSelectedKegId={props.onSelectedKegId} kegId={props.kegId}/>
       </div><hr/>
     </div>
   )
@@ -64,7 +64,8 @@ Keg.propTypes = {
   abv: PropTypes.string,
   price: PropTypes.string,
   remaining: PropTypes.string,
-  currentRouterPath: PropTypes.string
+  currentRouterPath: PropTypes.string,
+  onSelectedKegId: PropTypes.func
 }
 
 export default Keg

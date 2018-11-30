@@ -38,7 +38,8 @@ function KegForm(props) {
   function handleEditKegFormSubmission(event) {
     event.preventDefault();
     alert("Editted successfully");
-    props.onEditingKeg("44c1ce37-776d-41b6-af8f-8b119bf6b334", {
+    let kegId = props.currentRouterPath.split("/")[2];
+    props.onEditingKeg(kegId, {
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,

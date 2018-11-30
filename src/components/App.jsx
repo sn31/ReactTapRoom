@@ -9,7 +9,6 @@ import background from "../assets/images/bg2.jpg";
 import About from "./About";
 import Error404 from "./Error404";
 import { v4 } from "uuid";
-import DeleteKeg from "./DeleteKeg";
 
 class App extends React.Component {
   constructor(props) {
@@ -66,7 +65,8 @@ class App extends React.Component {
           price: "6",
           remaining: "58"
         }
-      }
+      },
+      kegId: null
     };
   }
 
@@ -78,15 +78,16 @@ class App extends React.Component {
     this.setState({ masterKegList: newMasterKegList });
   }
   handleEditKeg(kegId, editedKeg) {
-    console.log("Edit keg");
     for (var key in this.state.masterKegList) {
-      console.log(key);
       if (key === kegId) {
         let newMasterKegList = Object.assign({}, this.state.masterKegList); //creating copy of object
         newMasterKegList[kegId] = editedKeg; //updating value
-        this.setState({ masterKegList:newMasterKegList });
+        this.setState({ masterKegList: newMasterKegList });
       }
     }
+  }
+  handleSelectingKeg(newKegId) {
+    this.setState({ kegId: newKegId });
   }
   render() {
     return (
@@ -130,18 +131,13 @@ class App extends React.Component {
               />
             )}
           />
-            <Route
-            path="/deletekeg"
-            render={props => (
-              <DeleteKeg
-               
-              />
-            )}
-          />
+          <Route path="/deletekeg" render={props => <DeleteKeg />} />
           <Route
             path="/employee"
             render={props => (
               <Employee
+                kegId={this.state.kegId}
+                onSelectedKegId={this.handleSelectingKeg.bind(this)}
                 masterKegList={this.state.masterKegList}
                 currentRouterPath={props.location.pathname}
                 onNewKegCreation={this.handleAddingNewKeg.bind(this)}

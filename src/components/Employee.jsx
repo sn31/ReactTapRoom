@@ -7,7 +7,7 @@ function Employee(props) {
   return(
     
     <div id="menu">
-      <KegList onNewKegCreation={props.onNewKegCreation} masterKegList={props.masterKegList} currentRouterPath = {props.currentRouterPath}/>
+      <KegList onSelectedKegId={props.onSelectedKegId} kegId={props.kegId} onNewKegCreation={props.onNewKegCreation} masterKegList={props.masterKegList} currentRouterPath = {props.currentRouterPath}/>
     </div>
   )
 }
@@ -15,6 +15,8 @@ function Employee(props) {
 Employee.propTypes = {
   currentRouterPath:PropTypes.string.isRequired,
   masterKegList: PropTypes.object,
-  onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func,
+  kegId:PropTypes.string,
+  onSelectedKegId:PropTypes.func
 }
 export default Employee

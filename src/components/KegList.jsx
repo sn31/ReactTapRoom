@@ -20,6 +20,7 @@ function KegList(props) {
         key={kegId}
         kegId = {kegId}
         currentRouterPath={props.currentRouterPath}
+        onSelectedKegId={props.onSelectedKegId}
       />
     )
   })
@@ -135,6 +136,7 @@ KegList.propTypes = {
   kegId:PropTypes.string,
   currentRouterPath: PropTypes.string,
   masterKegList: PropTypes.object,
-  onNewKegCreation: PropTypes.func
+  onNewKegCreation: PropTypes.func,
+  onSelectedKegId: PropTypes.func
 }
 export default KegList
