@@ -1,11 +1,19 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-function DeleteKeg() {
+function DeleteKeg(props) {
+  
+  function handleDeleteConfirmation() {
+    let kegId = props.currentRouterPath.split('/')[2];
+    let keg = props.masterKegList[kegId];
+    alert(keg.name+" was deleted successfully");
+    props.onDeletingKeg(kegId);
+  }
   return (
     <div>
       <h1>Are you sure you want to delete this keg?</h1>
 
-      <button>Submit</button>
+      <button onClick={handleDeleteConfirmation}>Submit</button>
       <style jsx>{`
         div {
           text-align: center;
@@ -31,4 +39,9 @@ function DeleteKeg() {
   )
 }
 
+DeleteKeg.PropTypes = {
+  onDeletingKeg: PropTypes.func,
+  currentRouterPath:PropTypes.string.isRequired,
+  masterKegList: PropTypes.object,
+}
 export default DeleteKeg
