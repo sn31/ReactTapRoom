@@ -4,10 +4,12 @@ import { Switch, Route } from "react-router-dom";
 import KegList from "./KegList";
 import Employee from "./Employee";
 import KegForm from "./KegForm";
+import DeleteKeg from "./DeleteKeg";
 import background from "../assets/images/bg2.jpg";
 import About from "./About";
 import Error404 from "./Error404";
 import { v4 } from "uuid";
+import DeleteKeg from "./DeleteKeg";
 
 class App extends React.Component {
   constructor(props) {
@@ -128,7 +130,14 @@ class App extends React.Component {
               />
             )}
           />
-
+            <Route
+            path="/deletekeg"
+            render={props => (
+              <DeleteKeg
+               
+              />
+            )}
+          />
           <Route
             path="/employee"
             render={props => (

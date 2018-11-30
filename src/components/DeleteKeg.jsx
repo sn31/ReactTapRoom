@@ -68,7 +68,7 @@ function DeleteKeg() {
       <style jsx>{`
        div {
            text-align:center;
-        border-radius: 5px;
+        
         padding: 20px;
         margin-top: 3em;
         width: 50%;
@@ -76,8 +76,8 @@ function DeleteKeg() {
         margin-right: auto;
       }
       button {
-        background-color:#d888a3;
-        border: none;
+        background-color:black;
+        border: 1px solid white;
         color: white;
         padding: 7px 16px;
         text-align: center;

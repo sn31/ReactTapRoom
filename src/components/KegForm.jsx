@@ -1,66 +1,69 @@
-import React from 'react'
+import React from "react";
 import {
   Form,
   FormGroup,
   Col,
   ControlLabel,
   FormControl
-} from 'react-bootstrap'
-import PropTypes from 'prop-types'
-
+} from "react-bootstrap";
+import PropTypes from "prop-types";
 
 function KegForm(props) {
-  let _name = null
-  let _brewer = null
-  let _description = null
-  let _abv = null
-  let _remaining = null
-  let _price = null
+  let _name = null;
+  let _brewer = null;
+  let _description = null;
+  let _abv = null;
+  let _remaining = null;
+  let _price = null;
 
   function handleNewKegFormSubmission(event) {
-    event.preventDefault()
-    alert('Added successfully')
+    event.preventDefault();
+    alert("Added successfully");
     props.onNewKegCreation({
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
       abv: _abv.value,
       price: _price.value,
-      remaining: _remaining.value,
-    })
+      remaining: _remaining.value
+    });
 
-    _name.value = ''
-    _brewer.value = ''
-    _description.value = ''
-    _abv.value = ''
-    _remaining.value = ''
-    _price.value = ''
-    
+    _name.value = "";
+    _brewer.value = "";
+    _description.value = "";
+    _abv.value = "";
+    _remaining.value = "";
+    _price.value = "";
   }
   function handleEditKegFormSubmission(event) {
-    event.preventDefault()
-    alert('Editted successfully')
-    props.onEditingKeg("44c1ce37-776d-41b6-af8f-8b119bf6b334",{
+    event.preventDefault();
+    alert("Editted successfully");
+    props.onEditingKeg("44c1ce37-776d-41b6-af8f-8b119bf6b334", {
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
       abv: _abv.value,
       price: _price.value,
-      remaining: _remaining.value,
-    })
+      remaining: _remaining.value
+    });
 
-    _name.value = ''
-    _brewer.value = ''
-    _description.value = ''
-    _abv.value = ''
-    _remaining.value = ''
-    _price.value = ''
-    
+    _name.value = "";
+    _brewer.value = "";
+    _description.value = "";
+    _abv.value = "";
+    _remaining.value = "";
+    _price.value = "";
   }
 
   return (
     <div>
-      <Form onSubmit={(props.currentRouterPath === '/addnewkeg') ? handleNewKegFormSubmission : handleEditKegFormSubmission}>
+      <Form
+        onSubmit={
+          props.currentRouterPath === "/addnewkeg"
+            ? handleNewKegFormSubmission
+            : handleEditKegFormSubmission
+        }
+      >
         <FormGroup>
           <Col componentClass={ControlLabel}>Name</Col>
           <Col>
@@ -70,7 +73,7 @@ function KegForm(props) {
               id="name"
               placeholder="Name"
               inputRef={input => {
-                _name = input
+                _name = input;
               }}
             />
           </Col>
@@ -84,7 +87,7 @@ function KegForm(props) {
               id="brewer"
               placeholder="Brewer"
               inputRef={input => {
-                _brewer = input
+                _brewer = input;
               }}
             />
           </Col>
@@ -98,7 +101,7 @@ function KegForm(props) {
               id="description"
               placeholder="Description"
               inputRef={input => {
-                _description = input
+                _description = input;
               }}
             />
           </Col>
@@ -112,7 +115,7 @@ function KegForm(props) {
               id="abv"
               placeholder="ABV"
               inputRef={input => {
-                _abv = input
+                _abv = input;
               }}
             />
           </Col>
@@ -126,7 +129,7 @@ function KegForm(props) {
               id="remaining"
               placeholder="Remaining"
               inputRef={input => {
-                _remaining = input
+                _remaining = input;
               }}
             />
           </Col>
@@ -140,7 +143,7 @@ function KegForm(props) {
               id="price"
               placeholder="Price"
               inputRef={input => {
-                _price = input
+                _price = input;
               }}
             />
           </Col>
@@ -152,18 +155,14 @@ function KegForm(props) {
 
       <style jsx>{`
         div {
-          border-radius: 5px;
-          padding-top: 20px;
-          padding-bottom: 20px;
-          margin-top: 3em;
+          border: 1px solid white;
           width: 40%;
-          margin-left: auto;
-          margin-right: auto;
-          padding-left: auto;
-          padding-right: auto;
+          margin: 2em auto 2em auto;
+          padding: 1em 1em 1em 1em;
+          background-color: rgba(144, 148, 155, 0.8);
         }
         button {
-          background-color: #d888a3;
+          background-color: black;
           border: none;
           color: white;
           text-align: center;
@@ -173,17 +172,15 @@ function KegForm(props) {
           margin-left: auto;
           margin-right: auto;
         }
-        label {
-          font-weight: bold;
-        }
+        
       `}</style>
     </div>
-  )
+  );
 }
 
 KegForm.propTypes = {
   onNewKegCreation: PropTypes.func,
   onEditingKeg: PropTypes.func,
   currentRouterPath: PropTypes.string
-}
-export default KegForm
+};
+export default KegForm;

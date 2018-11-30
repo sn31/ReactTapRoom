@@ -75,19 +75,26 @@ function KegList(props) {
           box-shadow: 5px 10px 8px black;
         }
         .title {
-          text-align: left;
+          text-align: center;
           margin-left: 1em;
           margin-bottom: 1em;
         }
+        #addButton {
+          text-align: center;
+        }
+        hr {
+          border: 1px solid black;
+          background-color: black;
+        }
       `}</style>
-      <div className="row title">
-        <div className="col-sm-10">
+     
+        <div className="title">
           <h1>Inventory Management</h1>
         </div>
-        <div className="col-sm-2">
-          <Link style={{textDecoration:'none',color: 'white'}} to='/addnewkeg'>Add New Keg</Link>
-        </div>
-      </div>
+        <div id="addButton">
+        <Link style={{textDecoration:'none',color: 'white', border:'1px solid white', padding:'0.3em'}} to='/addnewkeg'><strong>Add New Keg</strong></Link>
+        </div><hr/>
+      
 
       <div className="row">
         <div className="col-sm-2">
