@@ -1,20 +1,20 @@
 import React from 'react'
-import ActionList from './ActionList'
+
 import KegList from './KegList'
 import PropTypes from 'prop-types'
 
 function Employee(props) {
   return(
     
-    <div id="menu" className="col-md-12">
-      <KegList masterKegList={props.masterKegList} currentRouterPath = {props.currentRouterPath}/>
-    
+    <div id="menu">
+      <KegList onNewKegCreation={props.onNewKegCreation} masterKegList={props.masterKegList} currentRouterPath = {props.currentRouterPath}/>
     </div>
   )
 }
 
 Employee.propTypes = {
   currentRouterPath:PropTypes.string.isRequired,
-  masterKegList: PropTypes.array
+  masterKegList: PropTypes.array,
+  onNewKegCreation: PropTypes.func
 }
 export default Employee

@@ -1,75 +1,74 @@
-import React from 'react'
-import Header from './Header'
-import { Switch, Route } from 'react-router-dom'
-import KegList from './KegList'
-import Employee from './Employee'
-import KegForm from './KegForm'
-import DeleteKeg from './DeleteKeg'
-import background from '../assets/images/bg2.jpg'
-import About from './About'
-import Error404 from './Error404'
+import React from "react";
+import Header from "./Header";
+import { Switch, Route } from "react-router-dom";
+import KegList from "./KegList";
+import Employee from "./Employee";
+
+import background from "../assets/images/bg2.jpg";
+import About from "./About";
+import Error404 from "./Error404";
 
 class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       masterKegList: [
         {
-          name: 'Ruby Zozzle',
-          brewer: 'Hi-Wheel',
-          description: 'Sparkling Wine & Grapefruit',
-          abv: '6.8%',
-          price: '7',
-          remaining: '20'
+          name: "Ruby Zozzle",
+          brewer: "Hi-Wheel",
+          description: "Sparkling Wine & Grapefruit",
+          abv: "6.8%",
+          price: "7",
+          remaining: "20"
         },
         {
-          name: 'Tart N Juicy',
-          brewer: 'Epic',
-          description: 'Sour IPA',
-          abv: '4.5%',
-          price: '6',
-          remaining: '60'
+          name: "Tart N Juicy",
+          brewer: "Epic",
+          description: "Sour IPA",
+          abv: "4.5%",
+          price: "6",
+          remaining: "60"
         },
         {
-          name: 'Hamm\'s',
-          brewer: 'Miller/Coors',
-          description: 'American Lager',
-          abv: '4.7%',
-          price: '3',
-          remaining: '65'
+          name: "Hamm's",
+          brewer: "Miller/Coors",
+          description: "American Lager",
+          abv: "4.7%",
+          price: "3",
+          remaining: "65"
         },
         {
-          name: 'Prismatic',
-          brewer: 'Ninkasi',
-          description: 'Juicy IPA',
-          abv: '5.9%',
-          price: '6',
-          remaining: '75'
+          name: "Prismatic",
+          brewer: "Ninkasi",
+          description: "Juicy IPA",
+          abv: "5.9%",
+          price: "6",
+          remaining: "75"
         },
         {
-          name: 'Juicy Haze',
-          brewer: 'New Belgium',
-          description: 'India Pale Ale',
-          abv: '7.5%',
-          price: '6',
-          remaining: '18'
+          name: "Juicy Haze",
+          brewer: "New Belgium",
+          description: "India Pale Ale",
+          abv: "7.5%",
+          price: "6",
+          remaining: "18"
         },
         {
-          name: '8 Hop',
-          brewer: 'New Belgium',
-          description: 'Pale Ale',
-          abv: '5.5%',
-          price: '6',
-          remaining: '58'
+          name: "8 Hop",
+          brewer: "New Belgium",
+          description: "Pale Ale",
+          abv: "5.5%",
+          price: "6",
+          remaining: "58"
         }
       ]
-    }
+    };
   }
   handleAddingNewKeg(newKeg) {
-    var newMasterKegList = this.state.masterKegList
-    newMasterKegList.push(newKeg)
-    console.log('Hello')
-    this.setState({masterKegList:newMasterKegList})
+    var newMasterKegList = this.state.masterKegList.slice();
+    newMasterKegList.push(newKeg); 
+
+    this.setState({ masterKegList: newMasterKegList });
   }
 
   render() {
@@ -90,23 +89,27 @@ class App extends React.Component {
         `}</style>
         <Header />
         <Switch>
-          <Route exact path="/" render={props=>(<KegList masterKegList={this.state.masterKegList}/>)} />
+          <Route
+            exact
+            path="/"
+            render={() => <KegList masterKegList={this.state.masterKegList} />}
+          />
           <Route
             path="/employee"
             render={props => (
-              <Employee masterKegList={this.state.masterKegList} currentRouterPath={props.location.pathname} />
+              <Employee
+                masterKegList={this.state.masterKegList}
+                currentRouterPath={props.location.pathname}
+                onNewKegCreation={this.handleAddingNewKeg.bind(this)}
+              />
             )}
           />
-
-          <Route path="/addnewkeg" render={()=><KegForm onNewKegCreation={this.handleAddingNewKeg.bind(this)}/>}/>
-          <Route path="/editkeg" component={KegForm} />
-          <Route path="/deletekeg" component={DeleteKeg} />
           <Route path="/about" component={About} />
           <Route component={Error404} />
         </Switch>
       </div>
-    )
+    );
   }
 }
 
-export default App
+export default App;

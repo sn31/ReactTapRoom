@@ -15,23 +15,25 @@ function KegForm(props) {
   let _abv = null
   let _remaining = null
   let _price = null
+
   function handleNewKegFormSubmission(event) {
     event.preventDefault()
-    console.log('Added successfully')
+    alert('Added successfully')
     props.onNewKegCreation({
       name: _name.value,
       brewer: _brewer.value,
       description: _description.value,
       abv: _abv,
+      price: _price,
       remaining: _remaining,
-      price: _price
     })
-    _name = ''
-    _brewer = ''
-    _description = ''
-    _abv = ''
-    _remaining = ''
-    _price = ''
+
+    _name.value = ''
+    _brewer.value = ''
+    _description.value = ''
+    _abv.value = ''
+    _remaining.value = ''
+    _price.value = ''
     
   }
 

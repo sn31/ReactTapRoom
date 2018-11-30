@@ -81,7 +81,7 @@ function KegList(props) {
           <h1>Inventory Management</h1>
         </div>
         <div className="col-sm-2">
-          <Link style={{textDecoration:'none',color: 'white'}} to={'/addnewkeg'}>Add New Keg</Link>
+          <Link style={{textDecoration:'none',color: 'white'}} to='/addnewkeg'>Add New Keg</Link>
         </div>
       </div>
 
@@ -122,6 +122,7 @@ function KegList(props) {
 
 KegList.propTypes = {
   currentRouterPath: PropTypes.string,
-  masterKegList: PropTypes.array
+  masterKegList: PropTypes.array,
+  onNewKegCreation: PropTypes.func
 }
 export default KegList
